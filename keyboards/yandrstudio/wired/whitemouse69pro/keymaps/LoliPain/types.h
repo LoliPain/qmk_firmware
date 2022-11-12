@@ -6,6 +6,7 @@ enum layer_list {
 	_LOCKS,
 	_VIMOVEMENT,
 	_VIMOUSE,
+	_VIWINDOWS,
 	_RGB,
 };
 
@@ -15,6 +16,7 @@ enum layer_switch {
 	LOCKS,
 	VIMOVEMNT,
 	VIMOUSE,
+	VIWINDOWS,
 	RGB
 };
 
