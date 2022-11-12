@@ -17,7 +17,7 @@ enum layer_switch {
 	VIMOVEMNT,
 	VIMOUSE,
 	VIWINDOWS,
-	RGB
+	RGBADJ
 };
 
 
