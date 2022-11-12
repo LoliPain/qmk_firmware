@@ -7,7 +7,3 @@
 
 // Hardware
 #define FORCE_NKRO
-
-// HID Debug
-#define NO_PRINT
-#define NO_DEBUG
