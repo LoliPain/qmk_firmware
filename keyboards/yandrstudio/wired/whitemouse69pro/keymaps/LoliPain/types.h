@@ -10,15 +10,14 @@ enum layer_list {
 	_RGB,
 };
 
-enum layer_switch {
-	QWERTY = SAFE_RANGE,
-	SUPPLY,
+enum special_keycodes {
+	SUPPLY = SAFE_RANGE,
 	LOCKS,
-	VIMOVEMNT,
-	VIMOUSE,
 	VIWINDOWS,
-	RGBADJ
+	L_SPACE,
+	R_SPACE,
+	WINNEXT,
+	WINPREV,
+	LLOCK
 };
-
-
 
