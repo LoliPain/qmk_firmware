@@ -134,6 +134,20 @@ bool locking_layer_blocking(uint16_t keycode, keyrecord_t *record) {
 }
 
 
+bool viwindows_layer_blocking(uint16_t keycode, keyrecord_t *record) {
+	// Emulate Ctrl+Win+Left/Right at H/L
+	switch (keycode) {
+		case WINPREV:
+			if (record->event.pressed) tap_code16(LCTL(LGUI(KC_LEFT)));
+			return true;
+		case WINNEXT:
+			if (record->event.pressed) tap_code16(LCTL(LGUI(KC_RGHT)));
+			return true;
+	}
+	return false;
+}
+
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	// QWERTY layer processing
 	switch (keycode) {
