@@ -11,11 +11,9 @@ enum layer_list {
 };
 
 enum special_keycodes {
-	SUPPLY = SAFE_RANGE,
-	LOCKS,
-	VIWINDOWS,
-	L_SPACE,
+	L_SPACE = SAFE_RANGE,
 	R_SPACE,
+	LOCKS,
 	WINNEXT,
 	WINPREV,
 	LLOCK

@@ -18,13 +18,13 @@ Epomaker MiniCat69
 * \/----------------------------\
 	* **[_VIMOUSE]**
 	* **HJKL** *mouse movement + extra keys*
-	* Enabled while holding **R5**#[LSpace-**RSpace**-SUPPLY] @ **_QWERTY**
+	* **MO()** holding **R5**#[LSpace-**RSpace**-SUPPLY] @ **_QWERTY**
 * \\----------------------------/
 *
 * \/----------------------------\
 	* **[_VIMOVEMENT]**
 	* **HJKL** *becomes arrows*
-	* **OSL()** double-tapping **R5**#[LSpace-**RSpace**-SUPPLY] @ **_QWERTY**
+	* **MO()** double-tapping **R5**#[LSpace-**RSpace**-SUPPLY] @ **_QWERTY**
 * \\----------------------------/
 *
 * \/----------------------------\
@@ -36,7 +36,7 @@ Epomaker MiniCat69
 * \/----------------------------\
 	* **[_LOCKS]**
 	* *Code(Win)Lock + NumLock + LayerLock*
-	* **OSL()** toggle using **R1**#[F12-**Backspace**-Insert] @ **_SUPPLY**
+	* **MO()** toggle using **R1**#[F12-**Backspace**-Insert] @ **_SUPPLY**
 * \\----------------------------/
 *
 * \/----------------------------\
