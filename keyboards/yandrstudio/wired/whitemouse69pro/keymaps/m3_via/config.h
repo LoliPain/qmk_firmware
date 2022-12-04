@@ -7,3 +7,6 @@
 
 // Hardware
 #define FORCE_NKRO
+
+// <C-S-Esc> bypass
+#define GRAVE_ESC_CTRL_OVERRIDE
