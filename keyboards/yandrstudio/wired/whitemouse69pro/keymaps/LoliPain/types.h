@@ -10,7 +10,6 @@ enum layer_list {
 
 enum special_keycodes {
 	KC_L_SPACE = SAFE_RANGE,
-	KC_R_SPACE,
 	KC_VIM_LEFT,
 	KC_VIM_DOWN,
 	KC_VIM_UP,
@@ -20,3 +19,4 @@ enum special_keycodes {
 	KC_LOCKS
 };
 
+#define KC_R_SPACE LT(_VIMABLE, KC_SPC)
