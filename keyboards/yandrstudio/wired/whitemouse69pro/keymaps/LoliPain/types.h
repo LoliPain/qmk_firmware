@@ -19,4 +19,4 @@ enum special_keycodes {
 	KC_LOCKS
 };
 
-#define KC_R_SPACE LT(_VIMABLE, KC_SPC)
+#define KC_R_SPACE LT(0, KC_NO)
