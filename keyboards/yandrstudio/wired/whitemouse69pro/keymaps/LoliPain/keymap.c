@@ -225,7 +225,7 @@ bool process_supply_layer(uint16_t keycode, keyrecord_t *record) {
                 if (record->event.pressed) layer_on(_LOCKS);
                 else layer_off(_LOCKS);
             }
-            else layers_locked = !layers_locked;
+            else if (record->event.pressed) layers_locked = !layers_locked;
             break;
 
         // Process _RGB layer switching if not layers locked
@@ -290,6 +290,19 @@ bool process_qwerty_layer(uint16_t keycode, keyrecord_t *record) {
 }
 
 
+// Process layers that could be locked
+//
+bool process_lockable(uint16_t keycode, keyrecord_t *record) {
+    if (!layers_locked) {
+        // _LOCKS
+        if(process_locks_layer(keycode, record)) return true;
+        // _VIMABLE
+        if(process_vimable_layer(keycode, record)) return true;
+    }
+    return false;
+}
+
+
 // Global layers processing
 // Interrupts default KC processing if any of layers returned true
 //
@@ -298,10 +311,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	if(process_qwerty_layer(keycode, record)) return false;
     // _SUPPLY
 	if(process_supply_layer(keycode, record)) return false;
-    // _LOCKS
-	if(process_locks_layer(keycode, record)) return false;
-    // _VIMABLE
-	if(process_vimable_layer(keycode, record)) return false;
+
+    // Lockable layers
+    //
+	if(process_lockable(keycode, record)) return false;
 
     return true;
 }
