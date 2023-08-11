@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 		_______, _______, _______, _______, _______, _______, _______, _______, _______, KC_LBRC, KC_RBRC, _______, _______, _______,  KC_HOME,
 		_______, _______, _______, _______, _______, _______, _______, _______, KC_SCLN, KC_QUOT, _______,          _______, _______,  KC_PGUP,
 		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  KC_PGDN,
-		_______, _______, _______, _______,          XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, _______, _______,  KC_END),
+		_______, _______, _______, _______,          XXXXXXX, XXXXXXX, KC_RGB,  _______, _______, _______, _______, _______, _______,  KC_END),
 
     // Placeholders for processing vim emulation
     // Also used for mouse emulation configuration
@@ -127,11 +127,18 @@ bool process_locks_layer(uint16_t keycode, keyrecord_t *record) {
 
 bool process_supply_layer(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        // Process _SUPPLY layer switching
+        // Process _LOCKS layer switching
         //
         case KC_LOCKS:
             if (record->event.pressed) layer_on(_LOCKS);
             else layer_off(_LOCKS);
+            break;
+
+        // Process _RGB layer switching
+        //
+        case KC_RGB:
+            if (record->event.pressed) layer_on(_RGB);
+            else layer_off(_RGB);
             break;
 
     }

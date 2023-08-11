@@ -16,7 +16,8 @@ enum special_keycodes {
 	KC_VIM_RIGHT,
     KC_SUPPLY,
     KC_LAYER_LOCK,
-	KC_LOCKS
+	KC_LOCKS,
+    KC_RGB
 };
 
 #define KC_R_SPACE LT(0, KC_NO)
