@@ -54,6 +54,7 @@
 
 
 #include QMK_KEYBOARD_H
+#include "print.h"
 #include "types.h"
 
 static bool layers_locked;
@@ -315,6 +316,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // Lockable layers
     //
 	if(process_lockable(keycode, record)) return false;
+
+    // dprintf("%i\n", keycode);
 
     return true;
 }
