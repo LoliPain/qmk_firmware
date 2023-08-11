@@ -112,6 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 bool process_locks_layer(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        // Process layer locking button leads to value reverting
         case KC_LAYER_LOCK:
 			if (record->event.pressed) {
                 layers_locked = !layers_locked;
@@ -126,7 +127,6 @@ bool process_locks_layer(uint16_t keycode, keyrecord_t *record) {
 
 bool process_supply_layer(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-
         // Process _SUPPLY layer switching
         //
         case KC_LOCKS:
@@ -150,7 +150,6 @@ bool process_qwerty_layer(uint16_t keycode, keyrecord_t *record) {
 
 		case KC_R_SPACE:
             if (layers_locked) {
-
                 // Normal KC_SPC if layers locked
                 //
                 if (record->event.pressed) register_code(KC_SPC);
@@ -187,8 +186,17 @@ bool process_qwerty_layer(uint16_t keycode, keyrecord_t *record) {
 // Interrupts default KC processing if any of layers returned true
 //
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+
+    // _qwerty
+    //
 	if(process_qwerty_layer(keycode, record)) return false;
+
+    // _supply
+    //
 	if(process_supply_layer(keycode, record)) return false;
+
+    // _locks
+    //
 	if(process_locks_layer(keycode, record)) return false;
 
     return true;
