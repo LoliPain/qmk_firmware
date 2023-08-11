@@ -14,22 +14,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #pragma once
-#include "config_common.h"
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xAA96
 #define PRODUCT_ID      0xAAEB
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    EAU_Y&R
-#define PRODUCT         eau87
+#define MANUFACTURER    "CHOSERA_Y&R"
+#define PRODUCT         "Hercules80"
 
-// enable the nkro when using the VIA.
-#define FORCE_NKRO
+#define TAP_HOLD_CAPS_DELAY 250
 
-// fix VIA RGB_light
-#define VIA_HAS_BROKEN_KEYCODES
-
-/* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 5
-
-#define TAP_CODE_DELAY 15
+#define GPIO_INPUT_PIN_DELAY 100
+#define MATRIX_IO_DELAY 100

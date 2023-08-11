@@ -15,17 +15,22 @@ A creative coder.
 | rainbow65     | 0xAA96    | 0xAA00     | OLED, RGB, ENCODER                    | &check;           |
 | cool87        | 0xAA96    | 0xAA01     | 32u4                                  | &cross;           |
 | sb65p         | 0xAA96    | 0xAA02     | 2.4G Single mode Split Keyboard       | &cross;           |
-| r65ble        | 0xAA96    | 0xAA03     | BLE 5.0 Dual mod version of rainbow65 | &quest;           |
+| r65ble        | 0xAA96    | 0xAA03     | BLE 5.0 Dual mod version of rainbow65 | &cross;           |
 | whitemouse28t | 0xAA96    | 0xAA04     | External EEPROM (95256), For Test     | &cross;           |
-| m60ble        | 0xAA96    | 0xAA05     | BLE 5.0 Dual mode, RGB                | &quest;           |
+| m60ble        | 0xAA96    | 0xAA05     | BLE 5.0 Dual mode, RGB                | &cross;           |
 | nz64ble       | 0xAA96    | 0xAA06     | BLE 5.0 Dual mode                     | &check;           |
-| zn660         | 0xAA96    | 0xAA07     | 2.4G Single mode Split Keyboard       | &check;           |
-| nz60ble       | 0xAA96    | 0xAA08     | BLE 5.0 Dual mode                     | &check;           |
-| yrtower       | 0xAA96    | 0xAA09     | BLE 5.0 Dual mode, RGB, OLDE, Encoder | &check;           |
-| yr32test      | 0xAA96    | 0xAA0A     | BLE, Full Functions                   | &check;           |
-| yrec_hhkb     | 0xAA96    | 0xAA0B     | BLE, Electro Capacitive               | &check;           |
+| zn660         | 0xAA96    | 0xAA07     | 2.4G Single mode Split Keyboard       | &cross;           |
+| nz60ble       | 0xAA96    | 0xAA08     | BLE 5.0 Dual mode                     | &quest;           |
+| yrtower       | 0xAA96    | 0xAA09     | BLE 5.0 Dual mode, RGB, OLDE, Encoder | &quest;           |
+| yr32test      | 0xAA96    | 0xAA0A     | BLE, Full Functions                   | &cross;           |
+| yrec_hhkb     | 0xAA96    | 0xAA0B     | BLE, Electro Capacitive               | &cross;           |
 | yr6095        | 0xAA96    | 0xAA0C     | F103                                  | &check;           |
 | yr80          | 0xAA96    | 0xAA0D     | F103                                  | &check;           |
+| ps64ble       | 0xAA96    | 0xAA0E     | BLE 5.0 Dual mode,RGB                 | &check;           |
+| sp65pm        | 0xAA96    | 0xAA0F     | 2.4G Single mode Split Keyboard       | &cross;           |
+| yr80pro       | 0xAA96    | 0xAA10     | 8k report rate                        | &check;           |
+
+
 
 ### Keyboards Completed with Y&R Studio Participation
 
@@ -38,7 +43,7 @@ A creative coder.
 | whitemouse69    | 0xAA96    | 0xAAA4                   | F401, RGB                        | &check;           |
 | wave87          | 0xAA96    | 0xAAA5                   | F401, RGB                        | &check;           |
 | m69             | 0xAA96    | 0xAAA6                   | F401,80%, RGB, Hotswap           | &check;           |
-| m69             | 0xAA96    | 0xAAB6                   | F401,80%, RGB, Solder            | &check;           |
+| m69             | 0xAA96    | 0xAAB6(discard)          | F401,80%, RGB, Solder            | &check;           |
 | zhou75          | 0xAA96    | 0xAAA7                   | F401, ENCODER, Hotswap           | &check;           |
 |                 |           | 0xAAB7                   | F401, ENCODER, Solder            | &check;           |
 | yp87ble         | 0xAA96    | 0xAAA8                   | BLE 5.0 Dual mode                | &cross;           |
@@ -78,18 +83,21 @@ A creative coder.
 | rita65r2        | 0xAA96    | 0xAA86                   | F103, RGB                        | &check;           |
 | nightstar75     | 0xAA96    | 0xAA87                   | F103, RGB                        | &check;           |
 | buff67v3        | 0xAA96    | 0xAA88                   | F103, RGB                        | &check;           |
+| rose65          | 0xAA96    | 0xAA74(shadow of 0xAA88) | F103, RGB, Hotswap               | &check;           |
+| luck65          | 0xAA96    | 0xAA6D(shadow of 0xAA88) | F103, RGB, Hotswap               | &check;           |
 | dome65          | 0xAA96    | 0xAA89                   | BLE                              | &cross;           |
 | soul70          | 0xAA96    | 0xAA8A                   | BLE                              | &check;           |
 | nz67ble         | 0xAA96    | 0xAA8B                   | BLE                              | &check;           |
 | whitemouse69v2  | 0xAA96    | 0xAA8C                   | F103, RGB                        | &check;           |
 | tg67            | 0xAA96    | 0xAA8D                   | F103, RGB                        | &check;           |
+| enter67         | 0xAA96    | 0xAA73(shadow of 0xAA8D) | F103, RGB                        | &check;           |
 | wave75          | 0xAA96    | 0xAA8E                   | F103                             | &check;           |
 | ID96            | 0xAA96    | 0xAA8F                   | F103, RGB                        | &quest;           |
 | ID68            | 0xAA96    | 0xAA60                   | F103, RGB                        | &quest;           |
 | BL75            | 0xAA96    | 0xAA61                   | F103, RGB                        | &check;           |
 | m83ble          | 0xAA96    | 0xAA62                   | BLE 5.0 Dual mode, Hotswap, RGB  | &check;           |
-| sp60            | 0xAA96    | 0xAA63                   | F103, RGB, Hotswap               | &check;           |
-|                 |           | 0xAA64                   | F10, RGB, Solder                 | &check;           |
+| sp60            | 0xAA96    | 0xAA63                   | F103, RGB, Hotswap               | &cross;           |
+|                 |           | 0xAA64                   | F10, RGB, Solder                 | &cross;           |
 | suki68ble       | 0xAA96    | 0xAA65                   | BLE 5.0 Dual mode, Hotswap, RGB  | &check;           |
 | tg75            | 0xAA96    | 0xAA66                   | F103, RGB                        | &check;           |
 | perce67         | 0xAA96    | 0xAA67                   | BLE 5.0 Dual mode, Hotswap, RGB  | &check;           |
@@ -98,14 +106,58 @@ A creative coder.
 | keit75          | 0xAA96    | 0xAA69                   | F103, RGB                        | &check;           |
 | star80          | 0xAA96    | 0xAA6B                   | F103, RGB, Hotswap, TFT Screen   | &check;           |
 | uc65s           | 0xAA96    | 0xAA6C                   | BLE, Hotswap, RGB,               | &check;           |
-| transition80    | 0xAA96    | 0xAA70                   | F103, RGB, Hotswap               | &check;           |
+| transition80_BAK| 0xAA96    | 0xAA70                   | F103, RGB, Hotswap               | &check;           |
+| transition80    | 0xAA96    | 0xAA6F                   | F103, RGB, Hotswap               | &check;           |
 | meteor80        | 0xAA96    | 0xAA71                   | F103, RGB, Hotswap, Partially    | &check;           |
 | n66ble          | 0xAA96    | 0xAA72                   | BLE, Hotswap, RGB, Audio         | &check;           |
-| rose65          | 0xAA96    | 0xAA74(shadow of 0xAA88) | F103, RGB, Hotswap               | &check;           |
-| noname75        | 0xAA96    | 0xAA75                   | F103, Hotswap                    | &check;           |
-
-
-
+| noname75        | 0xAA96    | 0xAA75                   | F103, RGB, Hotswap               | &cross;           |
+| meetAlice       | 0xAA96    | 0xAA6E                   | BLE,  RGB, Hotswap, Alice        | &cross;           |
+| sueno69         | 0xAA96    | 0xAA76                   | F103, RGB, Hotswap, Tian68       | &check;           |
+| ckw80(v2)       | 0xAA96    | 0xAA77                   | BLE,  RGB, Hotswap               | &check;           |
+| id87            | 0xAA96    | 0xAA78                   | BLE,  RGB, Hotswap               | &check;           |
+| tg67ble         | 0xAA96    | 0xAA79                   | BLE,  RGB, Hotswap               | &cross;           |
+| prime75         | 0xAA96    | 0xAA7A                   | F103, RGB, Hotswap               | &cross;           |
+| dbp75           | 0xAA96    | 0xAA7B                   | F103, RGB, Hotswap, TFT Screen   | &check;           |
+| mu80            | 0xAA96    | 0xAA7C                   | F103, RGB, Hotswap, Split left   | &check;           |
+| mu80pad         | 0xAA96    | 0xAA7C                   | F103, RGB, Hotswap, Split right  | &check;           |
+| infi75          | 0xAA96    | 0xAA7D                   | F103, RGB, Hotswap, Encoder      | &cross;           |
+| gwydd65         | 0xAA96    | 0xAA7E                   | F103, Multi-lauout, Hotswap      | &check;           |
+| razor65         | 0xAA96    | 0xAA7F(shadow of 0xAA88) | F103, RGB, Hotswap               | &check;           |
+| answer65        | 0xAA96    | 0xAAB1                   | BLE, Hotswap                     | &check;           |
+| zhou68          | 0xAA96    | 0xAAB2                   | BLE, Hotswap, RGB, TFT, Tian68   | &check;           |
+| starAlice       | 0xAA96    | 0xAAB3                   | Hotswap, RGB, TFT, Alice         | &check;           |
+| npad            | 0xAA96    | 0xAAB4                   | BLE, Hotswap, RGB                | &check;           |
+| u80             | 0xAA96    | 0xAAB5                   | Hotswap                          | &cross;           |
+| dbp40           | 0xAA96    | 0xAAB6                   | BLE, Hotswap                     | &check;           |
+| y8              | 0xAA96    | 0xAAB8                   | Hotswap                          | &check;           |
+| sonic170        | 0xAA96    | 0xAAB9                   | Hotswap                          | &check;           |
+| retro70         | 0xAA96    | 0xAABA                   | Hotswap, Split KB                | &check;           |
+| ji98            | 0xAA96    | 0xAABB                   | Hotswap, BLE, TFT                | &check;           |
+| magnum65        | 0xAA96    | 0xAABC                   | Hotswap, BLE                     | &check;           |
+| ckw75           | 0xAA96    | 0xAABD                   | Hotswap, BLE                     | &check;           |
+| dmk87           | 0xAA96    | 0xAABE                   | Hotswap, BLE, RGB(aw)            | &quest;           |
+| g80             | 0xAA96    | 0xAABF                   | Hotswap, RGB                     | &quest;           |
+| ling70ble       | 0xAA96    | 0xAAB0                   | Hotswap, BLE                     | &cross;           |
+| liu80           | 0xAA96    | 0xAAD0                   | Hotswap                          | &check;           |
+| dark75          | 0xAA96    | 0xAAD1                   | Hotswap                          | &check;           |
+| enter80         | 0xAA96    | 0xAAD2                   | Hotswap                          | &cross;           |
+| nova75          | 0xAA96    | 0xAAD3                   | Hotswap, BLE, RGB                | &check;           |
+| knight313       | 0xAA96    | 0xAAD4                   | Hotswap, BLE                     | &check;           |
+| studiox         | 0xAA96    | 0xAAD5                   | Hotswap                          | &check;           |
+| tc80            | 0xAA96    | 0xAAD6                   | Hotswap                          | &check;           |
+| stella          | 0xAA96    | 0xAAD7                   | Hotswap                          | &check;           |
+| man40           | 0xAA96    | 0xAAD8                   | Hotswap                          | &check;           |
+| parity70        | 0xAA96    | 0xAAD9                   | Hotswap                          | &check;           |
+| fave60s         | 0xAA96    | 0xAADA                   | Solder                           | &check;           |
+| shanhai70       | 0xAA96    | 0xAADB                   | Hotswap                          | &check;           |
+| N65BLE          | 0xAA96    | 0xAADC                   | Hotswap, BLE, RGB                | &check;           |
+| 65E             | 0xAA96    | 0xAADD                   | Hotswap                          | &check;           |
+| t80 lite        | 0xAA96    | 0xAADE                   | Hotswap, RGB                     | &check;           |
+| aqurius75       | 0xAA96    | 0xAADF                   | Hotswap, BLE, RGB                | &check;           |
+| tong75          | 0xAA96    | 0xAAE0                   | Hotswap                          | &check;           |
+| gwydd65         | 0xAA96    | 0xAAE1                   | F103, Solder                     | &check;           |
+| y80rgb          | 0xAA96    | 0xAAE2                   | Hotswap, RGB                     | &check;           |
+| tn75pro         | 0xAA96    | 0xAAE3                   | Hotswap, BLE, RGB                | &check;           |
 
 
 ### Obsolete or Test keyboard for reference design only
@@ -116,6 +168,7 @@ A creative coder.
 | tjoystick | 0xAA96    | 0xFFFF     | STM32F103, Joystick           | &cross;           |
 | tlcd      | 0xAA96    | 0xFFFF     | STM32F401, LCD                | &cross;           |
 | tec       | 0xAA96    | 0xFFFF     | STM32F401, Electro Capacitive | &cross;           |
+| tpico     | 0xAA96    | 0xFFFF     | RP2040                        | &cross;           |
 
 ### Keyboard Tools Developed by Y&R Studio
 

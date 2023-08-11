@@ -32,32 +32,28 @@
 }
 
 enum keyboard_keycodes {
-#ifdef VIA_ENABLE
-    LOCK_GUI = USER00,
+    LOCK_GUI = QK_USER,
 #ifdef RGB_MATRIX_ENABLE
     KC_KEY_UNDER_RGBSW,
 #endif
     TOG_MACOS_KEYMAP,
     KC_MISSION_CONTROL,
     KC_LAUNCHPAD,
-    NEW_SAFE_RANGE = SAFE_RANGE  // Important!
-#else
-    LOCK_GUI = SAFE_RANGE,
-#ifdef RGB_MATRIX_ENABLE
-    KC_KEY_UNDER_RGBSW,
-#endif
-    KC_MISSION_CONTROL,
-    KC_LAUNCHPAD,
-    NEW_SAFE_RANGE   // Important!
-#endif
+	TOG_CG_TOG
 };
 
 #define KC_LG     LOCK_GUI
 #define KC_MACOS  TOG_MACOS_KEYMAP
 #define KC_MCTL   KC_MISSION_CONTROL
 #define KC_LPAD   KC_LAUNCHPAD
+#define KC_CGT    TOG_CG_TOG
+
 #ifdef RGB_MATRIX_ENABLE
 #   define RGB_KG_T  KC_KEY_UNDER_RGBSW
 #else
-#   define RGB_KG_T  KC_F14
+#   define RGB_KG_T  KC_NO
+#endif
+
+#ifndef RGBLIGHT_ENABLE
+#   define BAT_SHOW  KC_NO
 #endif
