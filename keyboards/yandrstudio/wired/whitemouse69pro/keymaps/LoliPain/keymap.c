@@ -139,15 +139,21 @@ bool process_vimable_layer(uint16_t keycode, keyrecord_t *record) {
         case KC_LGUI:
             if (layer_state_is(_VIMABLE)) {
                 if (record->event.pressed) vim_windows = true;
-                else vim_windows = false;
+                else {
+                    vim_windows = false;
+                    unregister_code(KC_LGUI);
+                }
+                return true;
             }
-            return true;
+            break;
 
         case KC_LALT:
             if (layer_state_is(_VIMABLE)) {
                 if (record->event.pressed) vim_arrows = !vim_arrows;
+                else unregister_code(KC_LALT);
+                return true;
             }
-            return true;
+            break;
 
         case KC_VIM_LEFT:
             if (vim_arrows) {
