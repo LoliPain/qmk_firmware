@@ -58,6 +58,9 @@
 
 static bool layers_locked;
 
+static bool vim_arrows;
+static bool vim_windows;
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	// Double KC_NO in middle is used for non-existent on MiniCat knob (=
@@ -113,6 +116,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 bool process_locks_layer(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         // Process layer locking button leads to value reverting
+        //
         case KC_LAYER_LOCK:
 			if (record->event.pressed) {
                 layers_locked = !layers_locked;
@@ -125,22 +129,108 @@ bool process_locks_layer(uint16_t keycode, keyrecord_t *record) {
 }
 
 
+bool process_vimable_layer(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // Process Vim HJKL
+        // By default binds to mouse movements
+        // Holding GUI (Win) button, remaps JK to Win+Shift+Left / Right
+        // Pressing LAlt toggle HJKL as arrows
+        //
+        case KC_LGUI:
+            if (layer_state_is(_VIMABLE)) {
+                if (record->event.pressed) vim_windows = true;
+                else vim_windows = false;
+            }
+            return true;
+
+        case KC_LALT:
+            if (layer_state_is(_VIMABLE)) {
+                if (record->event.pressed) vim_arrows = true;
+                else vim_arrows = false;
+            }
+            return true;
+
+        case KC_VIM_LEFT:
+            if (vim_arrows) {
+                if (record->event.pressed) register_code(KC_LEFT);
+                else unregister_code(KC_LEFT);
+            }
+
+            else {
+                if (record->event.pressed) register_code(KC_MS_L);
+                else unregister_code(KC_MS_L);
+            }
+            break;
+
+        case KC_VIM_DOWN:
+            if (vim_arrows) {
+                if (record->event.pressed) register_code(KC_DOWN);
+                else unregister_code(KC_DOWN);
+            }
+
+            else if (vim_windows) {
+                if (record->event.pressed) tap_code16(LCTL(LGUI(KC_LEFT)));
+            }
+
+            else {
+                if (record->event.pressed) register_code(KC_MS_D);
+                else unregister_code(KC_MS_D);
+            }
+            break;
+
+        case KC_VIM_UP:
+            if (vim_arrows) {
+                if (record->event.pressed) register_code(KC_UP);
+                else unregister_code(KC_UP);
+            }
+
+            else if (vim_windows) {
+                if (record->event.pressed) tap_code16(LCTL(LGUI(KC_RGHT)));
+            }
+
+            else {
+                if (record->event.pressed) register_code(KC_MS_U);
+                else unregister_code(KC_MS_U);
+            }
+            break;
+
+        case KC_VIM_RIGHT:
+            if (vim_arrows) {
+                if (record->event.pressed) register_code(KC_RGHT);
+                else unregister_code(KC_RGHT);
+            }
+
+            else {
+                if (record->event.pressed) register_code(KC_MS_R);
+                else unregister_code(KC_MS_R);
+            }
+            break;
+    }
+    return false;
+}
+
+
 bool process_supply_layer(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         // Process _LOCKS layer switching
+        // If locked, revert it
         //
         case KC_LOCKS:
-            if (record->event.pressed) layer_on(_LOCKS);
-            else layer_off(_LOCKS);
+            if (!layers_locked) {
+                if (record->event.pressed) layer_on(_LOCKS);
+                else layer_off(_LOCKS);
+            }
+            else layers_locked = !layers_locked;
             break;
 
-        // Process _RGB layer switching
+        // Process _RGB layer switching if not layers locked
         //
         case KC_RGB:
-            if (record->event.pressed) layer_on(_RGB);
-            else layer_off(_RGB);
+            if (!layers_locked) {
+                if (record->event.pressed) layer_on(_RGB);
+                else layer_off(_RGB);
+            }
             break;
-
     }
     return false;
 }
@@ -172,11 +262,17 @@ bool process_qwerty_layer(uint16_t keycode, keyrecord_t *record) {
                     // Switch to vim layer on hold
                     //
                     else if (record->event.pressed) layer_on(_VIMABLE);
-                    else if (layer_state_is(_VIMABLE)) layer_off(_VIMABLE);
+                    else if (layer_state_is(_VIMABLE)) {
+                        layer_off(_VIMABLE);
+
+                        // Force disable vim-modes on layer exit
+                        //
+                        if (vim_arrows) vim_arrows = !vim_arrows;
+                        if (vim_windows) vim_windows = !vim_windows;
+                    }
 
             }
             return true;
-
 
         case KC_SUPPLY:
         // Process _SUPPLY layer switching
@@ -193,18 +289,14 @@ bool process_qwerty_layer(uint16_t keycode, keyrecord_t *record) {
 // Interrupts default KC processing if any of layers returned true
 //
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-
-    // _qwerty
-    //
+    // _QWERTY
 	if(process_qwerty_layer(keycode, record)) return false;
-
-    // _supply
-    //
+    // _SUPPLY
 	if(process_supply_layer(keycode, record)) return false;
-
-    // _locks
-    //
+    // _LOCKS
 	if(process_locks_layer(keycode, record)) return false;
+    // _VIMABLE
+	if(process_vimable_layer(keycode, record)) return false;
 
     return true;
 }
