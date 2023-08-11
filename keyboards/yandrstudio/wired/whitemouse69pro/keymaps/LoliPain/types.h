@@ -4,18 +4,20 @@ enum layer_list {
 	_QWERTY,
 	_SUPPLY,
 	_LOCKS,
-	_VIMOVEMENT,
-	_VIMOUSE,
-	_VIWINDOWS,
+	_VIMABLE,
 	_RGB,
 };
 
 enum special_keycodes {
-	L_SPACE = SAFE_RANGE,
-	R_SPACE,
-	LOCKS,
-	WINNEXT,
-	WINPREV,
-	LLOCK
+	KC_L_SPACE = SAFE_RANGE,
+	KC_VIM_LEFT,
+	KC_VIM_DOWN,
+	KC_VIM_UP,
+	KC_VIM_RIGHT,
+    KC_SUPPLY,
+    KC_LAYER_LOCK,
+	KC_LOCKS,
+    KC_RGB
 };
 
+#define KC_R_SPACE LT(0, KC_NO)

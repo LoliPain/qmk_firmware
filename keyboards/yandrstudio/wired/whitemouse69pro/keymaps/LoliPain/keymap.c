@@ -27,13 +27,13 @@
 	⠀⠀⠀⠀⢰⠃⠀⢠⡟⢁⣿⣿⣿⣿⣿⣿⣿⣿⡟⠀⠀⠀⣿⣿⡇⣿⠀⠀⢸⣾⣦⣸⣄⠀⠀⣿⣄⠀⢻⡜⣿⣧⣸⣿⣿⣇⠀⢸⠏⠀⣰⣿⣿⢿⣿⣿⡇⢸⠀⢠⣿⣾⣿⣧⢠
 	⠀⠀⠀⠀⡾⠀⣰⡟⠀⢸⣿⣿⣿⣿⣿⣿⣿⡟⠈⠲⣄⠀⣿⣿⡇⢹⣷⣦⣸⢸⣿⣿⣿⡆⠀⢸⣿⣷⣼⠇⠘⣿⢿⣿⠋⠁⠀⠀⠀⠘⣿⣿⣿⣾⣿⣿⡇⢸⣶⣿⠃⡟⡿⣿⣄
 	⠀⠀⠀⠀⡇⣼⠏⠀⠀⣾⣻⣿⣿⣿⣿⣿⣿⠃⠀⠀⠈⠓⣿⣿⣧⠸⣿⣿⣿⣾⣾⣿⣿⣿⠀⠀⢿⣿⣿⣇⠀⠈⣓⡿⠦⠤⠤⠤⠤⣤⣿⣿⣿⣷⢿⣿⡇⢸⣿⠃⡼⢀⡇⢿⡟
-	⠀⠀⠀⠀⣿⠋⠀⠀⠀⡿⣿⣿⣿⣿⣿⢸⣿⡀⠀⠀⠀⠀⢹⣿⣿⠤⣿⣿⣿⣿⡟⢻⣿⣿⣄⠀⠘⣿⣿⣿⡌⠁⠘⠷⣤⡀⠁⢀⠀⠀⡿⠋⠙⢻⣿⣿⡇⣼⣷⣾⣇⣼⠁⣾⣇		
-	⠀⠀⠀⢠⡇⠀⠀⠀⣸⡏⣿⣿⣿⣿⣿⣿⡏⣇⠀⠀⠀⠠⠼⣿⣿⣆⢸⣿⣿⣻⣷⡈⢿⡀⠙⡄⠀⣸⣿⣿⣷⡀⠀⠀⠀⠈⢹⣷⣶⣾⣿⣀⣠⣿⣿⣿⡇⣿⢁⣿⣿⠃⠀⡿⣿		
-	⠀⠀⢀⡟⡇⠀⠀⠀⣿⣷⣿⣿⣿⣿⡇⣿⣧⣼⣷⣿⢿⣿⡿⣾⣯⡛⠆⠙⢷⣿⠿⠷⠀⠙⠶⣟⣻⣯⣼⣿⣿⣿⣆⠀⠀⠀⠘⢻⣿⣽⣿⣿⣿⣿⣿⣿⢧⡇⣾⣿⡇⠀⠀⠁⡿		
-	⠀⠀⣸⠀⣧⠀⠀⢸⢛⣿⣿⣿⣿⣿⣧⣿⡿⣿⠋⠀⢸⣿⣿⣿⣙⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠛⣹⣿⣬⡭⠛⢿⣿⣦⣄⠀⠀⣿⣿⣿⠿⣛⣛⢿⡿⣼⢸⣿⣽⣇⠀⠀⠀⡇		
+	⠀⠀⠀⠀⣿⠋⠀⠀⠀⡿⣿⣿⣿⣿⣿⢸⣿⡀⠀⠀⠀⠀⢹⣿⣿⠤⣿⣿⣿⣿⡟⢻⣿⣿⣄⠀⠘⣿⣿⣿⡌⠁⠘⠷⣤⡀⠁⢀⠀⠀⡿⠋⠙⢻⣿⣿⡇⣼⣷⣾⣇⣼⠁⣾⣇
+	⠀⠀⠀⢠⡇⠀⠀⠀⣸⡏⣿⣿⣿⣿⣿⣿⡏⣇⠀⠀⠀⠠⠼⣿⣿⣆⢸⣿⣿⣻⣷⡈⢿⡀⠙⡄⠀⣸⣿⣿⣷⡀⠀⠀⠀⠈⢹⣷⣶⣾⣿⣀⣠⣿⣿⣿⡇⣿⢁⣿⣿⠃⠀⡿⣿
+	⠀⠀⢀⡟⡇⠀⠀⠀⣿⣷⣿⣿⣿⣿⡇⣿⣧⣼⣷⣿⢿⣿⡿⣾⣯⡛⠆⠙⢷⣿⠿⠷⠀⠙⠶⣟⣻⣯⣼⣿⣿⣿⣆⠀⠀⠀⠘⢻⣿⣽⣿⣿⣿⣿⣿⣿⢧⡇⣾⣿⡇⠀⠀⠁⡿
+	⠀⠀⣸⠀⣧⠀⠀⢸⢛⣿⣿⣿⣿⣿⣧⣿⡿⣿⠋⠀⢸⣿⣿⣿⣙⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠛⣹⣿⣬⡭⠛⢿⣿⣦⣄⠀⠀⣿⣿⣿⠿⣛⣛⢿⡿⣼⢸⣿⣽⣇⠀⠀⠀⡇
 	⠀⢰⡇⠀⠸⡄⠀⢸⢸⣿⣿⣿⣿⣿⣿⡇⡇⠛⠂⠀⢸⠂⢻⣿⡯⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡿⢿⣽⣷⢺⣿⠙⢿⡭⣥⡿⠟⠁⠘⢿⣿⡬⢿⡟⣼⡏⣿⢹⠀⠀⠀⡇				 LoliPain
 	⠀⡾⠀⠀⠀⠹⣄⢸⣾⣿⣿⣿⣿⣿⣿⣹⣿⡄⠀⠀⠨⣷⣤⣭⣴⡿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣻⣤⣈⣙⣩⣿⠏⠀⠉⠀⡸⢹⠧⣴⣧⣄⣿⡇⣿⠁⣿⢿⡿⡎⢀⠀⠀⡇			Epomaker MiniCat 69
-	⢸⠇⠀⠀⠀⠀⠈⢸⣿⡿⣿⣿⣿⣿⣿⢿⣟⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠈⠁⠈⣰⣿⣿⣿⠟⢸⣿⣸⣯⣾⠣⠁⠀⠀⠀⡇			
+	⢸⠇⠀⠀⠀⠀⠈⢸⣿⡿⣿⣿⣿⣿⣿⢿⣟⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠁⠀⠀⠀⠈⠁⠈⣰⣿⣿⣿⠟⢸⣿⣸⣯⣾⠣⠁⠀⠀⠀⡇
 	⣾⠀⠀⠀⠀⠀⢠⣿⣿⣷⢿⣿⣿⣿⣿⣾⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣴⡿⣿⠛⠁⣤⣿⣱⣿⣿⣿⠀⠀⣶⠀⠀⢀
 	⣿⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⠏⠈⣿⡟⣿⡟⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⢁⣤⣾⣿⣷⣿⣿⣿⡇⠀⢀⡇⠀⠀⢸				QMK VIM-pref layout
 	⡇⠀⠀⠀⢀⣾⣾⣿⣿⣿⣿⣿⡿⠀⢀⡟⢀⡏⠀⡾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⢤⠀⠀⠀⠀⠀⣠⣾⣷⣶⣾⣿⣯⣿⣝⣼⣿⣿⣿⡇⠀⢸⠀⠀⠀⠀
@@ -58,110 +58,251 @@
 
 static bool layers_locked;
 
+static bool vim_arrows;
+static bool vim_windows;
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-	[_QWERTY] = LAYOUT(
-		QK_GESC, KC_1,    KC_2,    KC_3,    KC_4,   KC_5,   KC_6,    KC_7,    KC_8,        KC_9,   KC_0,    KC_MINS, KC_EQL, KC_BSPC, KC_DEL,
-		KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,   KC_T,   KC_Y,    KC_U,    KC_I,        KC_O,   KC_P,    KC_BSLS, KC_P7,  KC_P8,   KC_P9,
-		KC_CAPS, KC_A,    KC_S,    KC_D,    KC_F,   KC_G,   KC_H,    KC_J,    KC_K,        KC_L,   KC_ENT,           KC_P4,  KC_P5,   KC_P6,
-		KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,   KC_B,   KC_N,    KC_M,    KC_COMM,     KC_DOT, KC_SLSH, KC_UP,   KC_P1,  KC_P2,   KC_P3,
-		KC_LCTL, KC_LGUI, KC_LALT, L_SPACE,         XXXXXXX,XXXXXXX, R_SPACE, OSL(_SUPPLY),KC_RALT,KC_LEFT, KC_DOWN, KC_RGHT,KC_P0,   KC_PDOT),
 	// Double KC_NO in middle is used for non-existent on MiniCat knob (=
+    //
+    // Base layer for everyday use
+    //
+	[_QWERTY] = LAYOUT(
+		QK_GESC, KC_1,    KC_2,    KC_3,       KC_4, KC_5,    KC_6,       KC_7,       KC_8,      KC_9,    KC_0,    KC_MINS, KC_EQL, KC_BSPC, KC_DEL,
+		KC_TAB,  KC_Q,    KC_W,    KC_E,       KC_R, KC_T,    KC_Y,       KC_U,       KC_I,      KC_O,    KC_P,    KC_BSLS, KC_P7,  KC_P8,   KC_P9,
+		KC_CAPS, KC_A,    KC_S,    KC_D,       KC_F, KC_G,    KC_H,       KC_J,       KC_K,      KC_L,    KC_ENT,           KC_P4,  KC_P5,   KC_P6,
+		KC_LSFT, KC_Z,    KC_X,    KC_C,       KC_V, KC_B,    KC_N,       KC_M,       KC_COMM,   KC_DOT,  KC_SLSH, KC_UP,   KC_P1,  KC_P2,   KC_P3,
+		KC_LCTL, KC_LGUI, KC_LALT, KC_L_SPACE,       XXXXXXX, XXXXXXX,    KC_R_SPACE, KC_SUPPLY, KC_RALT, KC_LEFT, KC_DOWN, KC_RGHT, KC_P0,  KC_PDOT),
+
+    // Extension for _QWERTY layer, contains functional keys and missing characters
+    //
 	[_SUPPLY] = LAYOUT(
-		KC_PSCR, KC_F1,          KC_F2,   KC_F3,   KC_F4,  KC_F5,  KC_F6,   KC_F7,  KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12, LOCKS,   KC_INS,
-		_______, _______,        _______, _______, _______,_______,_______, _______,_______, KC_LBRC,KC_RBRC, _______, _______,_______, KC_HOME,
-		_______, _______,        _______, _______, _______,_______,_______, _______,KC_SCLN, KC_QUOT,_______,          _______,_______, KC_PGUP,
-		_______, _______,        _______, _______, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______, KC_PGDN,
-		_______, OSL(_VIWINDOWS),_______, _______,         XXXXXXX,XXXXXXX, _______,_______, _______,_______, _______, _______,_______, KC_END),
-	[_VIMOUSE] = LAYOUT(
-		_______, _______, _______, _______, _______,_______,_______, _______,_______, _______,KC_ACL0, KC_ACL1, KC_ACL2,_______, _______,
-		_______, _______, _______, _______, _______,_______,_______, _______,_______, _______,KC_BTN2, _______, _______,_______, _______,
-		_______, _______, _______, _______, _______,_______,KC_MS_L, KC_MS_D,KC_MS_U, KC_MS_R,KC_BTN1,          _______,_______, _______,
-		_______, _______, _______, _______, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______, _______,
-		_______, _______, _______, _______,         XXXXXXX,XXXXXXX, _______,_______, _______,_______, _______, _______,_______, _______),
-	[_VIMOVEMENT] = LAYOUT(
-		_______, _______, _______, _______, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______, _______,
-		_______, _______, _______, _______, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______, _______,
-		_______, _______, _______, _______, _______,_______,KC_LEFT, KC_DOWN,KC_UP,   KC_RGHT,_______,          _______,_______, _______,
-		_______, _______, _______, _______, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______, _______,
-		_______, _______, _______, _______,         XXXXXXX,XXXXXXX, _______,_______, _______,_______, _______, _______,_______, _______),
-	[_VIWINDOWS] = LAYOUT(
-		_______, _______, _______, _______, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______, _______,
-		_______, _______, _______, _______, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______, _______,
-		_______, _______, _______, _______, _______,_______,WINPREV, _______,_______, WINNEXT,_______,          _______,_______, _______,
-		_______, _______, _______, _______, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______, _______,
-		_______, _______, _______, _______,         XXXXXXX,XXXXXXX, _______,_______, _______,_______, _______, _______,_______, _______),
+		KC_PSCR, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_LOCKS, KC_INS,
+		_______, _______, _______, _______, _______, _______, _______, _______, _______, KC_LBRC, KC_RBRC, _______, _______, _______,  KC_HOME,
+		_______, _______, _______, _______, _______, _______, _______, _______, KC_SCLN, KC_QUOT, _______,          _______, _______,  KC_PGUP,
+		_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,  KC_PGDN,
+		_______, _______, _______, _______,          XXXXXXX, XXXXXXX, KC_RGB,  _______, _______, _______, _______, _______, _______,  KC_END),
+
+    // Placeholders for processing vim emulation
+    // Also used for mouse emulation configuration
+    //
+	[_VIMABLE] = LAYOUT(
+		_______, _______, _______, _______, _______, _______, _______,     _______,     _______,   _______,      KC_ACL0, KC_ACL1, KC_ACL2, _______, _______,
+		_______, _______, _______, _______, _______, _______, _______,     _______,     _______,   _______,      _______, KC_BTN2, _______, _______, _______,
+		_______, _______, _______, _______, _______, _______, KC_VIM_LEFT, KC_VIM_DOWN, KC_VIM_UP, KC_VIM_RIGHT,          KC_BTN1, _______, _______, _______,
+		_______, _______, _______, _______, _______, _______, _______,     _______,     _______,   _______,      _______, _______, _______, _______, _______,
+		_______, _______, _______, _______,          XXXXXXX, XXXXXXX,     _______,     _______,   _______,      _______, _______, _______, _______, _______),
+
+    // Layer that contains all available locking features, such as NumLock, WinLock and LayerLock
+    //
 	[_LOCKS] = LAYOUT(
-		LLOCK,   _______, _______, _______, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______,   KC_NLCK,
-		_______, _______, _______, _______, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______, _______,
-		_______, _______, _______, _______, _______,_______,_______, _______,_______, _______,_______,          _______,_______, _______,
-		_______, _______, _______, _______, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______, _______,
-		_______, KC_F23,  _______, _______,         XXXXXXX,XXXXXXX, _______,_______, _______,_______, _______, _______,_______, _______),
+		KC_LAYER_LOCK, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_NLCK,
+		_______,       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+		_______,       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______, _______, _______,
+		_______,       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+		_______,       KC_F23,  _______, _______,          XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______),
+
+    // Board RGB controls
+    //
 	[_RGB] = LAYOUT(
-		KC_F24,   RGB_M_P, RGB_M_B, RGB_M_R, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______, _______,
-		RGB_MOD,  RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI,_______,_______, _______,_______, _______,_______, _______, _______,_______, _______,
-		RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD,_______,_______, _______,_______, _______,_______,          _______,_______, _______,
-		_______,  _______, _______, _______, _______,_______,_______, _______,_______, _______,_______, _______, _______,_______, _______,
-		_______,  _______, _______, RGB_TOG,         XXXXXXX,XXXXXXX, _______,_______, _______,_______, _______, _______,_______, _______)
+		KC_F24,   RGB_M_P, RGB_M_B, RGB_M_R, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+		RGB_MOD,  RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+		RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, _______, _______, _______, _______, _______, _______,          _______, _______, _______,
+		_______,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+		_______,  _______, _______, RGB_TOG,          XXXXXXX, XXXXXXX, _______, _______, _______, _______, _______, _______, _______, _______)
 };
 
 
-bool locking_layer_blocking(uint16_t keycode, keyrecord_t *record) {
-	// Prevent keycodes if layers_locked
-	if (layers_locked) {
-		switch (keycode) {
-			case LOCKS:
-				if (record->event.pressed) layers_locked = !layers_locked;
-				break;
-			default:
-				if (record->event.pressed) register_code(keycode);
-				else unregister_code(keycode);
-		}
-		return true;
-	} else {
-		switch (keycode) {
-			case LOCKS:
-			// Process LOCKS here instead of MO() due to call queue
-				if (record->event.pressed) layer_on(_LOCKS);
-				else layer_off(_LOCKS);
-				return true;
-			case LLOCK:
-				if (record->event.pressed) layers_locked = !layers_locked;
-				return true;
-		}
-		return false;
-	}
+bool process_locks_layer(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // Process layer locking button leads to value reverting
+        //
+        case KC_LAYER_LOCK:
+			if (record->event.pressed) {
+                layers_locked = !layers_locked;
+                return true;
+            }
+            break;
+
+    }
+    return false;
 }
 
 
-bool viwindows_layer_blocking(uint16_t keycode, keyrecord_t *record) {
-	// Emulate Ctrl+Win+Left/Right at H/L
+bool process_vimable_layer(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // Process Vim HJKL
+        // By default binds to mouse movements
+        // Holding GUI (Win) button, remaps JK to Win+Shift+Left / Right
+        // Pressing LAlt toggle HJKL as arrows
+        //
+        case KC_LGUI:
+            if (layer_state_is(_VIMABLE)) {
+                if (record->event.pressed) vim_windows = true;
+                else {
+                    vim_windows = false;
+                    unregister_code(KC_LGUI);
+                }
+                return true;
+            }
+            break;
+
+        case KC_LALT:
+            if (layer_state_is(_VIMABLE)) {
+                if (record->event.pressed) vim_arrows = !vim_arrows;
+                else unregister_code(KC_LALT);
+                return true;
+            }
+            break;
+
+        case KC_VIM_LEFT:
+            if (vim_arrows) {
+                if (record->event.pressed) register_code(KC_LEFT);
+                else unregister_code(KC_LEFT);
+            }
+
+            else {
+                if (record->event.pressed) register_code(KC_MS_L);
+                else unregister_code(KC_MS_L);
+            }
+            break;
+
+        case KC_VIM_DOWN:
+            if (vim_windows) {
+                if (record->event.pressed) tap_code16(LCTL(LGUI(KC_LEFT)));
+            }
+
+            else if (vim_arrows) {
+                if (record->event.pressed) register_code(KC_DOWN);
+                else unregister_code(KC_DOWN);
+            }
+
+            else {
+                if (record->event.pressed) register_code(KC_MS_D);
+                else unregister_code(KC_MS_D);
+            }
+            break;
+
+        case KC_VIM_UP:
+            if (vim_windows) {
+                if (record->event.pressed) tap_code16(LCTL(LGUI(KC_RGHT)));
+            }
+
+            else if (vim_arrows) {
+                if (record->event.pressed) register_code(KC_UP);
+                else unregister_code(KC_UP);
+            }
+
+            else {
+                if (record->event.pressed) register_code(KC_MS_U);
+                else unregister_code(KC_MS_U);
+            }
+            break;
+
+        case KC_VIM_RIGHT:
+            if (vim_arrows) {
+                if (record->event.pressed) register_code(KC_RGHT);
+                else unregister_code(KC_RGHT);
+            }
+
+            else {
+                if (record->event.pressed) register_code(KC_MS_R);
+                else unregister_code(KC_MS_R);
+            }
+            break;
+    }
+    return false;
+}
+
+
+bool process_supply_layer(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        // Process _LOCKS layer switching
+        // If locked, revert it
+        //
+        case KC_LOCKS:
+            if (!layers_locked) {
+                if (record->event.pressed) layer_on(_LOCKS);
+                else layer_off(_LOCKS);
+            }
+            else layers_locked = !layers_locked;
+            break;
+
+        // Process _RGB layer switching if not layers locked
+        //
+        case KC_RGB:
+            if (!layers_locked) {
+                if (record->event.pressed) layer_on(_RGB);
+                else layer_off(_RGB);
+            }
+            break;
+    }
+    return false;
+}
+
+
+bool process_qwerty_layer(uint16_t keycode, keyrecord_t *record) {
 	switch (keycode) {
-		case WINPREV:
-			if (record->event.pressed) tap_code16(LCTL(LGUI(KC_LEFT)));
-			return true;
-		case WINNEXT:
-			if (record->event.pressed) tap_code16(LCTL(LGUI(KC_RGHT)));
-			return true;
-	}
-	return false;
+        // All special keycodes should be processed as normal
+        //
+		case KC_L_SPACE:
+			if (record->event.pressed) register_code(KC_SPC);
+			else unregister_code(KC_SPC);
+			break;
+
+		case KC_R_SPACE:
+            if (layers_locked) {
+                // Normal KC_SPC if layers locked
+                //
+                if (record->event.pressed) register_code(KC_SPC);
+                else unregister_code(KC_SPC);
+            }
+            else {
+                    // Tap process as KC_SPC
+                    //
+                    if (record->tap.count && record->event.pressed) {
+                        tap_code16(KC_SPC);
+                    }
+
+                    // Switch to vim layer on hold
+                    //
+                    else if (record->event.pressed) layer_on(_VIMABLE);
+                    else if (layer_state_is(_VIMABLE)) {
+                        layer_off(_VIMABLE);
+
+                        // Force disable vim-modes on layer exit
+                        //
+                        if (vim_arrows) vim_arrows = !vim_arrows;
+                        if (vim_windows) vim_windows = !vim_windows;
+                    }
+
+            }
+            return true;
+
+        case KC_SUPPLY:
+        // Process _SUPPLY layer switching
+        //
+            if (record->event.pressed) layer_on(_SUPPLY);
+            else layer_off(_SUPPLY);
+			break;
+    }
+    return false;
 }
 
 
+// Global layers processing
+// Interrupts default KC processing if any of layers returned true
+//
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-	// QWERTY layer processing
-	switch (keycode) {
-		case L_SPACE:
-			if (record->event.pressed) register_code(KC_SPC);
-			else unregister_code(KC_SPC);
-			break;
-		case R_SPACE:
-			if (record->event.pressed) register_code(KC_SPC);
-			else unregister_code(KC_SPC);
-			break;
-	}
-	if (locking_layer_blocking(keycode, record)) return false;
-	if (viwindows_layer_blocking(keycode, record)) return false;
-	return true;
+    // _QWERTY
+	if(process_qwerty_layer(keycode, record)) return false;
+    // _SUPPLY
+	if(process_supply_layer(keycode, record)) return false;
+    // _LOCKS
+	if(process_locks_layer(keycode, record)) return false;
+    // _VIMABLE
+	if(process_vimable_layer(keycode, record)) return false;
+
+    return true;
 }
 
