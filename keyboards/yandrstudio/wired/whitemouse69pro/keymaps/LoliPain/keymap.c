@@ -145,8 +145,7 @@ bool process_vimable_layer(uint16_t keycode, keyrecord_t *record) {
 
         case KC_LALT:
             if (layer_state_is(_VIMABLE)) {
-                if (record->event.pressed) vim_arrows = true;
-                else vim_arrows = false;
+                if (record->event.pressed) vim_arrows = !vim_arrows;
             }
             return true;
 
