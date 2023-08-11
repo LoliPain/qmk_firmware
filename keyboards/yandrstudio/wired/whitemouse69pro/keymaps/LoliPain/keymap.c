@@ -222,11 +222,11 @@ bool process_supply_layer(uint16_t keycode, keyrecord_t *record) {
         // If locked, revert it
         //
         case KC_LOCKS:
-            if (!layers_locked) {
-                if (record->event.pressed) layer_on(_LOCKS);
-                else layer_off(_LOCKS);
+            if (record->event.pressed) {
+                if (!layers_locked) layer_on(_LOCKS);
+                else layers_locked = !layers_locked;
             }
-            else if (record->event.pressed) layers_locked = !layers_locked;
+            else layer_off(_LOCKS);
             break;
 
         // Process _RGB layer switching if not layers locked
