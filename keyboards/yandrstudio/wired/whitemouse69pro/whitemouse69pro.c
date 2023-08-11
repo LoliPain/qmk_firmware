@@ -77,6 +77,7 @@ bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
 
 void eeconfig_init_kb(void) {
     kb_cums.raw = 0;
+    kb_cums.underground_rgb_sw = 1;
     eeconfig_update_kb(kb_cums.raw);
 }
 
