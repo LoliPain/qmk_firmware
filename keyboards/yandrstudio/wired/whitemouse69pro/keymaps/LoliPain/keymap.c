@@ -168,13 +168,13 @@ bool process_vimable_layer(uint16_t keycode, keyrecord_t *record) {
             break;
 
         case KC_VIM_DOWN:
-            if (vim_arrows) {
-                if (record->event.pressed) register_code(KC_DOWN);
-                else unregister_code(KC_DOWN);
+            if (vim_windows) {
+                if (record->event.pressed) tap_code16(LCTL(LGUI(KC_LEFT)));
             }
 
-            else if (vim_windows) {
-                if (record->event.pressed) tap_code16(LCTL(LGUI(KC_LEFT)));
+            else if (vim_arrows) {
+                if (record->event.pressed) register_code(KC_DOWN);
+                else unregister_code(KC_DOWN);
             }
 
             else {
@@ -184,13 +184,13 @@ bool process_vimable_layer(uint16_t keycode, keyrecord_t *record) {
             break;
 
         case KC_VIM_UP:
-            if (vim_arrows) {
-                if (record->event.pressed) register_code(KC_UP);
-                else unregister_code(KC_UP);
+            if (vim_windows) {
+                if (record->event.pressed) tap_code16(LCTL(LGUI(KC_RGHT)));
             }
 
-            else if (vim_windows) {
-                if (record->event.pressed) tap_code16(LCTL(LGUI(KC_RGHT)));
+            else if (vim_arrows) {
+                if (record->event.pressed) register_code(KC_UP);
+                else unregister_code(KC_UP);
             }
 
             else {
