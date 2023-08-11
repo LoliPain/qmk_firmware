@@ -161,7 +161,6 @@ bool process_qwerty_layer(uint16_t keycode, keyrecord_t *record) {
                     //
                     if (record->tap.count && record->event.pressed) {
                         tap_code16(KC_SPC);
-                        return true;
                     }
 
                     // Switch to vim layer on hold
@@ -170,7 +169,8 @@ bool process_qwerty_layer(uint16_t keycode, keyrecord_t *record) {
                     else if (layer_state_is(_VIMABLE)) layer_off(_VIMABLE);
 
             }
-			break;
+            return true;
+
 
         case KC_SUPPLY:
         // Process _SUPPLY layer switching
