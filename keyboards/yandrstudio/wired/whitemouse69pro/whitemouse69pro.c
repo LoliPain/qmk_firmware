@@ -82,6 +82,7 @@ void eeconfig_init_kb(void) {
 }
 
 void keyboard_post_init_kb(void) {
+    keyboard_post_init_user();
     kb_cums.underground_rgb_sw = eeconfig_read_kb();
 }
 
