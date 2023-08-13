@@ -329,6 +329,11 @@ bool rgb_matrix_indicators_user(void) {
 
 
 void keyboard_post_init_user(void) {
+    // RGB Defaults
     //
+    rgb_matrix_mode_noeeprom(RGB_MATRIX_CYCLE_SPIRAL);
+    rgb_matrix_sethsv_noeeprom(0, 130, 255);
+    rgb_matrix_set_speed_noeeprom(10);
+
 }
 
