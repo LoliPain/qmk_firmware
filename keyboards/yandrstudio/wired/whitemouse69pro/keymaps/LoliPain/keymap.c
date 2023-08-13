@@ -71,7 +71,10 @@ static bool vim_windows;
 #define VIM_K_LED g_led_config.matrix_co[2][8]
 #define VIM_L_LED g_led_config.matrix_co[2][9]
 
-#define FN_LED g_led_config.matrix_co[4][5]
+#define W_LED g_led_config.matrix_co[1][2]
+#define A_LED g_led_config.matrix_co[2][1]
+#define S_LED g_led_config.matrix_co[2][2]
+#define D_LED g_led_config.matrix_co[2][3]
 
 #define STATUS_COLOR 255, 100, 0
 #define WIN_COLOR 30, 255, 30
@@ -350,8 +353,18 @@ void v_rgb_matrix_indicators_user(void) {
 
     // Locked layers indication
     //
-    if (layers_locked) rgb_matrix_set_color(FN_LED, STATUS_COLOR);
-    else rgb_matrix_set_color(FN_LED, RGB_OFF);
+    if (layers_locked) {
+        rgb_matrix_set_color(W_LED, STATUS_COLOR);
+        rgb_matrix_set_color(A_LED, STATUS_COLOR);
+        rgb_matrix_set_color(S_LED, STATUS_COLOR);
+        rgb_matrix_set_color(D_LED, STATUS_COLOR);
+    }
+    else {
+        rgb_matrix_set_color(W_LED, RGB_OFF);
+        rgb_matrix_set_color(A_LED, RGB_OFF);
+        rgb_matrix_set_color(S_LED, RGB_OFF);
+        rgb_matrix_set_color(D_LED, RGB_OFF);
+    }
 
     // Layer-dependent RGB effects
     //
