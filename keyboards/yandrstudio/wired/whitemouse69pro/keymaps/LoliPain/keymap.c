@@ -66,6 +66,15 @@ static bool vim_windows;
 #define CAPS_LED g_led_config.matrix_co[2][0]
 #define NUM_LED g_led_config.matrix_co[0][14]
 
+#define STATUS_COLOR 255, 100, 0
+#define WIN_COLOR 30, 255, 30
+#define MOUSE_COLOR 30, 30, 255
+
+#define VIM_H g_led_config.matrix_co[2][6]
+#define VIM_J g_led_config.matrix_co[2][7]
+#define VIM_K g_led_config.matrix_co[2][8]
+#define VIM_L g_led_config.matrix_co[2][9]
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	// Double KC_NO in middle is used for non-existent on MiniCat knob (=
@@ -329,14 +338,39 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 void v_rgb_matrix_indicators_user(void) {
     // Caps lock red LED on caps status
     //
-    if (host_keyboard_led_state().caps_lock) rgb_matrix_set_color(CAPS_LED, 255, 0, 0);
-    else rgb_matrix_set_color(CAPS_LED, 0, 0, 0);
+    if (host_keyboard_led_state().caps_lock) rgb_matrix_set_color(CAPS_LED, STATUS_COLOR);
+    else rgb_matrix_set_color(CAPS_LED, RGB_OFF);
 
     // NumLock LED reverse status
     //
-    if (!host_keyboard_led_state().num_lock) rgb_matrix_set_color(NUM_LED, 255, 0, 0);
-    else rgb_matrix_set_color(NUM_LED, 0, 0, 0);
+    if (!host_keyboard_led_state().num_lock) rgb_matrix_set_color(NUM_LED, STATUS_COLOR);
+    else rgb_matrix_set_color(NUM_LED, RGB_OFF);
 
+    // Layer-dependent RGB effects
+    //
+    if (layer_state_is(_VIMABLE)) {
+        if (vim_windows) {
+            rgb_matrix_set_color(VIM_J, WIN_COLOR);
+            rgb_matrix_set_color(VIM_K, WIN_COLOR);
+        }
+        else if (vim_arrows) {
+            rgb_matrix_set_color(VIM_H, STATUS_COLOR);
+            rgb_matrix_set_color(VIM_J, STATUS_COLOR);
+            rgb_matrix_set_color(VIM_K, STATUS_COLOR);
+            rgb_matrix_set_color(VIM_L, STATUS_COLOR);
+        }
+        else {
+            rgb_matrix_set_color(VIM_H, MOUSE_COLOR);
+            rgb_matrix_set_color(VIM_J, MOUSE_COLOR);
+            rgb_matrix_set_color(VIM_K, MOUSE_COLOR);
+            rgb_matrix_set_color(VIM_L, MOUSE_COLOR);
+        }
+    } else {
+        rgb_matrix_set_color(VIM_H, RGB_OFF);
+        rgb_matrix_set_color(VIM_J, RGB_OFF);
+        rgb_matrix_set_color(VIM_K, RGB_OFF);
+        rgb_matrix_set_color(VIM_L, RGB_OFF);
+    }
 }
 
 
