@@ -55,7 +55,7 @@ led_config_t g_led_config = {
 
 
 bool rgb_matrix_indicators_kb(void) {
-    if (rgb_matrix_indicators_user()) return false;
+    if (!rgb_matrix_indicators_user()) return false;
 
     return true;
 }

@@ -63,6 +63,9 @@ static bool layers_locked;
 static bool vim_arrows;
 static bool vim_windows;
 
+#define CAPS_LED g_led_config.matrix_co[2][0]
+#define NUM_LED g_led_config.matrix_co[0][12]
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	// Double KC_NO in middle is used for non-existent on MiniCat knob (=
@@ -324,7 +327,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 bool rgb_matrix_indicators_user(void) {
-    return false;
+    // Caps lock red LED on caps status
+    //
+    if (host_keyboard_led_state().caps_lock) rgb_matrix_set_color(CAPS_LED, 255, 0, 0);
+    else rgb_matrix_set_color(CAPS_LED, 0, 0, 0);
+
+    // NumLock LED reverse status
+    //
+    if (!host_keyboard_led_state().num_lock) rgb_matrix_set_color(NUM_LED, 255, 0, 0);
+    else rgb_matrix_set_color(NUM_LED, 0, 0, 0);
+
+    return true;
 }
 
 
