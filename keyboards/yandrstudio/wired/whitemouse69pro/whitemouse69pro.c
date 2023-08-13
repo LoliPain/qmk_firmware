@@ -54,13 +54,6 @@ led_config_t g_led_config = {
 };
 
 
-bool rgb_matrix_indicators_kb(void) {
-    if (!rgb_matrix_indicators_user()) return false;
-
-    return true;
-}
-
-
 bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
     if (rgb_matrix_is_enabled()) {
         if (kb_cums.underground_rgb_sw == 1) {
@@ -79,6 +72,9 @@ bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
     } else {
         rgb_matrix_set_color_all(0,0,0);
     }
+
+    v_rgb_matrix_indicators_user();
+
     return true;
 }
 

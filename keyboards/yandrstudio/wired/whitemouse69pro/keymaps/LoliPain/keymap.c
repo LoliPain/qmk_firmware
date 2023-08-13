@@ -64,7 +64,7 @@ static bool vim_arrows;
 static bool vim_windows;
 
 #define CAPS_LED g_led_config.matrix_co[2][0]
-#define NUM_LED g_led_config.matrix_co[0][12]
+#define NUM_LED g_led_config.matrix_co[0][14]
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -326,7 +326,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
-bool rgb_matrix_indicators_user(void) {
+void v_rgb_matrix_indicators_user(void) {
     // Caps lock red LED on caps status
     //
     if (host_keyboard_led_state().caps_lock) rgb_matrix_set_color(CAPS_LED, 255, 0, 0);
@@ -337,7 +337,6 @@ bool rgb_matrix_indicators_user(void) {
     if (!host_keyboard_led_state().num_lock) rgb_matrix_set_color(NUM_LED, 255, 0, 0);
     else rgb_matrix_set_color(NUM_LED, 0, 0, 0);
 
-    return true;
 }
 
 
