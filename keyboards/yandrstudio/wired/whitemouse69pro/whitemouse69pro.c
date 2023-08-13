@@ -54,18 +54,24 @@ led_config_t g_led_config = {
 };
 
 
+bool rgb_matrix_indicators_kb(void) {
+    if (rgb_matrix_indicators_user()) return false;
+
+    return true;
+}
+
+
 bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
     if (rgb_matrix_is_enabled()) {
-        if (rgb_matrix_indicators_advanced_user(led_min, led_max)) { return false; }
         if (kb_cums.underground_rgb_sw == 1) {
             for (uint8_t i = led_min; i < led_max; ++i) {
-                if ((g_led_config.flags[i] == 4)) {
+                if (g_led_config.flags[i] == 4) {
                     rgb_matrix_set_color(i, 0, 0, 0);
                 }
             }
         } else if (kb_cums.underground_rgb_sw == 2) {
             for (uint8_t i = led_min; i < led_max; ++i) {
-                if ((g_led_config.flags[i] == 2)) {
+                if (g_led_config.flags[i] == 2) {
                     rgb_matrix_set_color(i, 0, 0, 0);
                 }
             }
