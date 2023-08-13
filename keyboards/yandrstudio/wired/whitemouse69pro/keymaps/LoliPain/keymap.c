@@ -66,6 +66,8 @@ static bool vim_windows;
 #define CAPS_LED g_led_config.matrix_co[2][0]
 #define NUM_LED g_led_config.matrix_co[0][14]
 
+#define FN_LED g_led_config.matrix_co[4][5]
+
 #define STATUS_COLOR 255, 100, 0
 #define WIN_COLOR 30, 255, 30
 #define MOUSE_COLOR 30, 30, 255
@@ -345,6 +347,11 @@ void v_rgb_matrix_indicators_user(void) {
     //
     if (!host_keyboard_led_state().num_lock) rgb_matrix_set_color(NUM_LED, STATUS_COLOR);
     else rgb_matrix_set_color(NUM_LED, RGB_OFF);
+
+    // Locked layers indication
+    //
+    if (layers_locked) rgb_matrix_set_color(FN_LED, STATUS_COLOR);
+    else rgb_matrix_set_color(FN_LED, RGB_OFF);
 
     // Layer-dependent RGB effects
     //
