@@ -175,12 +175,12 @@ bool process_vimable_layer(uint16_t keycode, keyrecord_t *record) {
             break;
 
         case KC_VIM_LEFT:
-            if (vim_arrows) {
+            if (vim_arrows && !vim_windows) {
                 if (record->event.pressed) register_code(KC_LEFT);
                 else unregister_code(KC_LEFT);
             }
 
-            else {
+            else if (!vim_windows) {
                 if (record->event.pressed) register_code(KC_MS_L);
                 else unregister_code(KC_MS_L);
             }
@@ -219,12 +219,12 @@ bool process_vimable_layer(uint16_t keycode, keyrecord_t *record) {
             break;
 
         case KC_VIM_RIGHT:
-            if (vim_arrows) {
+            if (vim_arrows && !vim_windows) {
                 if (record->event.pressed) register_code(KC_RGHT);
                 else unregister_code(KC_RGHT);
             }
 
-            else {
+            else if (!vim_windows) {
                 if (record->event.pressed) register_code(KC_MS_R);
                 else unregister_code(KC_MS_R);
             }
