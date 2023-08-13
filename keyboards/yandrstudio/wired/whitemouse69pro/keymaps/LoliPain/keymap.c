@@ -55,12 +55,30 @@
 
 #include QMK_KEYBOARD_H
 #include "print.h"
+
 #include "types.h"
 
 static bool layers_locked;
 
 static bool vim_arrows;
 static bool vim_windows;
+
+#define CAPS_LED g_led_config.matrix_co[2][0]
+#define NUM_LED g_led_config.matrix_co[0][14]
+
+#define VIM_H_LED g_led_config.matrix_co[2][6]
+#define VIM_J_LED g_led_config.matrix_co[2][7]
+#define VIM_K_LED g_led_config.matrix_co[2][8]
+#define VIM_L_LED g_led_config.matrix_co[2][9]
+
+#define W_LED g_led_config.matrix_co[1][2]
+#define A_LED g_led_config.matrix_co[2][1]
+#define S_LED g_led_config.matrix_co[2][2]
+#define D_LED g_led_config.matrix_co[2][3]
+
+#define STATUS_COLOR 255, 100, 0
+#define WIN_COLOR 30, 255, 30
+#define MOUSE_COLOR 30, 30, 255
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -106,7 +124,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Board RGB controls
     //
 	[_RGB] = LAYOUT(
-		KC_F24,   RGB_M_P, RGB_M_B, RGB_M_R, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+		URGB_K,   RGB_M_P, RGB_M_B, RGB_M_R, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 		RGB_MOD,  RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 		RGB_RMOD, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD, _______, _______, _______, _______, _______, _______,          _______, _______, _______,
 		_______,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
@@ -320,5 +338,68 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // dprintf("%i\n", keycode);
 
     return true;
+}
+
+void v_rgb_matrix_indicators_user(void) {
+    // Caps lock red LED on caps status
+    //
+    if (host_keyboard_led_state().caps_lock) rgb_matrix_set_color(CAPS_LED, STATUS_COLOR);
+    else rgb_matrix_set_color(CAPS_LED, RGB_OFF);
+
+    // NumLock LED reverse status
+    //
+    if (!host_keyboard_led_state().num_lock) rgb_matrix_set_color(NUM_LED, STATUS_COLOR);
+    else rgb_matrix_set_color(NUM_LED, RGB_OFF);
+
+    // Locked layers indication
+    //
+    if (layers_locked) {
+        rgb_matrix_set_color(W_LED, STATUS_COLOR);
+        rgb_matrix_set_color(A_LED, STATUS_COLOR);
+        rgb_matrix_set_color(S_LED, STATUS_COLOR);
+        rgb_matrix_set_color(D_LED, STATUS_COLOR);
+    }
+    else {
+        rgb_matrix_set_color(W_LED, RGB_OFF);
+        rgb_matrix_set_color(A_LED, RGB_OFF);
+        rgb_matrix_set_color(S_LED, RGB_OFF);
+        rgb_matrix_set_color(D_LED, RGB_OFF);
+    }
+
+    // Layer-dependent RGB effects
+    //
+    if (layer_state_is(_VIMABLE)) {
+        if (vim_windows) {
+            rgb_matrix_set_color(VIM_J_LED, WIN_COLOR);
+            rgb_matrix_set_color(VIM_K_LED, WIN_COLOR);
+        }
+        else if (vim_arrows) {
+            rgb_matrix_set_color(VIM_H_LED, STATUS_COLOR);
+            rgb_matrix_set_color(VIM_J_LED, STATUS_COLOR);
+            rgb_matrix_set_color(VIM_K_LED, STATUS_COLOR);
+            rgb_matrix_set_color(VIM_L_LED, STATUS_COLOR);
+        }
+        else {
+            rgb_matrix_set_color(VIM_H_LED, MOUSE_COLOR);
+            rgb_matrix_set_color(VIM_J_LED, MOUSE_COLOR);
+            rgb_matrix_set_color(VIM_K_LED, MOUSE_COLOR);
+            rgb_matrix_set_color(VIM_L_LED, MOUSE_COLOR);
+        }
+    } else {
+        rgb_matrix_set_color(VIM_H_LED, RGB_OFF);
+        rgb_matrix_set_color(VIM_J_LED, RGB_OFF);
+        rgb_matrix_set_color(VIM_K_LED, RGB_OFF);
+        rgb_matrix_set_color(VIM_L_LED, RGB_OFF);
+    }
+}
+
+
+void keyboard_post_init_user(void) {
+    // RGB Defaults
+    //
+    rgb_matrix_mode_noeeprom(RGB_MATRIX_CYCLE_SPIRAL);
+    rgb_matrix_sethsv_noeeprom(0, 130, 255);
+    rgb_matrix_set_speed_noeeprom(10);
+
 }
 
