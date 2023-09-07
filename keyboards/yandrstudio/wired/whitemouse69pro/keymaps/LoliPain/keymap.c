@@ -175,56 +175,56 @@ bool process_vimable_layer(uint16_t keycode, keyrecord_t *record) {
             break;
 
         case KC_VIM_LEFT:
-            if (vim_arrows && !vim_windows) {
+            if (vim_windows) {
+                if (record->event.pressed) tap_code16(LCTL(LGUI(KC_LEFT)));
+            }
+
+            else if (vim_arrows) {
                 if (record->event.pressed) register_code(KC_LEFT);
                 else unregister_code(KC_LEFT);
             }
 
-            else if (!vim_windows) {
+            else {
                 if (record->event.pressed) register_code(KC_MS_L);
                 else unregister_code(KC_MS_L);
             }
             break;
 
         case KC_VIM_DOWN:
-            if (vim_windows) {
-                if (record->event.pressed) tap_code16(LCTL(LGUI(KC_LEFT)));
-            }
-
-            else if (vim_arrows) {
+            if (vim_arrows && !vim_windows) {
                 if (record->event.pressed) register_code(KC_DOWN);
                 else unregister_code(KC_DOWN);
             }
 
-            else {
+            else if (!vim_windows) {
                 if (record->event.pressed) register_code(KC_MS_D);
                 else unregister_code(KC_MS_D);
             }
             break;
 
         case KC_VIM_UP:
-            if (vim_windows) {
-                if (record->event.pressed) tap_code16(LCTL(LGUI(KC_RGHT)));
-            }
-
-            else if (vim_arrows) {
+            if (vim_arrows && !vim_windows) {
                 if (record->event.pressed) register_code(KC_UP);
                 else unregister_code(KC_UP);
             }
 
-            else {
+            else if (!vim_windows) {
                 if (record->event.pressed) register_code(KC_MS_U);
                 else unregister_code(KC_MS_U);
             }
             break;
 
         case KC_VIM_RIGHT:
-            if (vim_arrows && !vim_windows) {
+            if (vim_windows) {
+                if (record->event.pressed) tap_code16(LCTL(LGUI(KC_RGHT)));
+            }
+
+            else if (vim_arrows) {
                 if (record->event.pressed) register_code(KC_RGHT);
                 else unregister_code(KC_RGHT);
             }
 
-            else if (!vim_windows) {
+            else {
                 if (record->event.pressed) register_code(KC_MS_R);
                 else unregister_code(KC_MS_R);
             }
@@ -370,8 +370,8 @@ void v_rgb_matrix_indicators_user(void) {
     //
     if (layer_state_is(_VIMABLE)) {
         if (vim_windows) {
-            rgb_matrix_set_color(VIM_J_LED, WIN_COLOR);
-            rgb_matrix_set_color(VIM_K_LED, WIN_COLOR);
+            rgb_matrix_set_color(VIM_H_LED, WIN_COLOR);
+            rgb_matrix_set_color(VIM_L_LED, WIN_COLOR);
         }
         else if (vim_arrows) {
             rgb_matrix_set_color(VIM_H_LED, STATUS_COLOR);
